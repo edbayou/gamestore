@@ -49,6 +49,10 @@ namespace GameStore.WebUI.Controllers
                 return View(game);
             }
         }
+        public ViewResult Create()
+        {
+            return View("Edit", new Game());
+        }
 
         [HttpPost]
         public ActionResult Delete(int gameId)
